@@ -8,9 +8,20 @@
   </head>
   <body>
     <h1 data-testid="slackUserName">Okechukwu Chidera</h1>
-    <img src="./display.jpg" alt="Odera" data-testid="slackDisplayId" />
+    <div class="container">
+      <img src="./display.jpg" alt="Odera" data-testid="slackDisplayId" />
 
-    <p class="day" data-testid="currentDayOfTheWeek">Friday</p>
-    <p class="time">2000ms</p>
+      <p data-testid="currentDayOfTheWeek">Day: <span class="day"></span></p>
+      <p>UTC Time: <span class="time"></span></p>
+      <p data-testid="myTrack" class="track">Frontend</p>
+      <a
+        href="https://github.com/OdecoGlobal/HNG-stage1.git"
+        target="_blank"
+        data-testid="githubURL"
+        class="github"
+        >GitHub</a
+      >
+    </div>
+    <script src="./index.js"></script>
   </body>
 </html>
