@@ -15,11 +15,15 @@ const weekDay = [
 
 const updateDayAndTime = function () {
   const now = new Date();
+  const hour = now.getHours().toString().padStart(2, "0");
+  const mins = now.getMinutes().toString().padStart(2, "0");
+  const secs = now.getSeconds().toString().padStart(2, "0");
+  console.log(hour, mins, secs);
 
   // update Day
   day.textContent = weekDay[now.getDay()];
   //  update Time
-  time.textContent = `${now.getTime()} ms`;
+  time.textContent = `${hour}:${mins}:${secs}`;
 };
 updateDayAndTime();
 setInterval(updateDayAndTime, 1000);
